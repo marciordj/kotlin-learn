@@ -1,14 +1,14 @@
 fun main() {
 
-  for (i in 6 downTo 1 step 2) {
-    val name: String = "Marcio $i";
-    val bankNumber: Int = 10 + i;
-    var balance: Double = 0.0 + i;
-
-
-    println("Titular da conta: $name");
-    println("Número da conta: $bankNumber");
-  }
+//  for (i in 6 downTo 1 step 2) {
+//    val name: String = "Marcio $i";
+//    val bankNumber: Int = 10 + i;
+//    var balance: Double = 0.0 + i;
+//
+//
+//    println("Titular da conta: $name");
+//    println("Número da conta: $bankNumber");
+//  }
 
 //  when {
 //    balance > 0.0 -> {
@@ -33,7 +33,7 @@ fun main() {
 //    in 1..10 -> println("$x is in the range");
 //    else -> println("$x is out of the range")
 //  }
-
+  arrTest()
 }
 
 fun conditionTesting(balance: Double) {
@@ -54,6 +54,12 @@ fun howToMakeFor() {
   }
 }
 
-fun arrTest(args: Array<String>) {
-  println(args.contentToString())
+fun arrTest() {
+  loop@ for (i in 1..100) {
+    println("i $i")
+    for (j in 1..100) {
+      println("j $j")
+      if (j == 5) break@loop
+    }
+  }
 }
